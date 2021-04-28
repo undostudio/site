@@ -24,7 +24,8 @@
 			display: inline;
 			font-size: 1.5rem;
 		}
-		p {
+		p,
+		.links {
 			margin: 5rem 0;
 			mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0));
 			-webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0));
@@ -64,6 +65,12 @@
 			h1 {
 				font-size: 2.5rem;
 			}
+			.links li:not(:first-child) {
+				margin-left: 2rem;
+			}
+			.links li {
+				display: inline;
+			}
 		}
 	</style>
 </head>
@@ -77,7 +84,10 @@
 		<ul>
 			<li><a href="#"><b>Flowstash</b></a> — project management tool for individuals and small teams, although project management is probably a bad way to describe it. It's different in that it's unusually freeform, allowing you to keep track of notes, ideas, and tasks in whatever way works best for you, while still having the benefits of loosely organizing things and keeping a history. It's a home for creative ideas that doesn't impose a structure, a supercharged text file.</li>
 		</ul>
-		<p><a href="mailto:work@undo.studio">work@undo.studio</a></p>
+		<ul class="links">
+			<li><a href="mailto:work@undo.studio">work@undo.studio</a></li>
+			<li><a href="https://www.instagram.com/johncjago/">Instagram</a></li>
+		</ul>
 	</main>
 	<footer>
 		© 2021 undo.studio — United States
