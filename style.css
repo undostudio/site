@@ -14,7 +14,7 @@ header img {
 	vertical-align: middle;
 	width: 3rem;
 }
-header a {
+.no-underline {
 	text-decoration: none;
 }
 h1 {
