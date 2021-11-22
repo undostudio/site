@@ -35,6 +35,13 @@ ol {
 a {
 	text-decoration: underline;
 }
+.links a {
+	color: #717171;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
 a:hover {
 	color: #ff5d5d;
 }
