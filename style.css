@@ -28,10 +28,6 @@ h2 {
 	margin-bottom: 1rem;
 	margin-top: 2.5rem;
 }
-ol {
-	margin-left: 1.5rem;
-	list-style-type: decimal-leading-zero;
-}
 a {
 	text-decoration: underline;
 }
