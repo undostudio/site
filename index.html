@@ -24,13 +24,23 @@
 		<p class="mb-1">In the works: Logotypist
 		<p class="mb-1">Previously: <a href="https://goupfile.com">Goupfile</a>
 		<ul class="text-gray-600 my-5 links">
-			<li class="mb-1"><a href="mailto:work@undo.studio">work@undo.studio</a></li>
 			<li class="mb-1"><a href="https://github.com/undostudio">GitHub</a></li>
 			<li class="mb-1"><a href="https://twitter.com/johncjago/">Twitter</a></li>
+			<li class="mb-1"><a href="javascript:;" id="email">Email</a></li>
 		</ul>
 	</main>
 	<footer>
 		<a href="https://johnjago.com">MMXXII — undo.studio</a>
 	</footer>
+	<script>
+		function clickAndUpdate(id, text) {
+			const el = document.getElementById(id);
+			el.addEventListener('click', e => {
+				e.target.textContent = text;
+			});
+		}
+
+		clickAndUpdate('email', 'work@' + 'undo.studio');
+	</script>
 </body>
 </html>
