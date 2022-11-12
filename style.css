@@ -57,6 +57,9 @@ a:hover,
 .mb-5 {
 	margin-bottom: 5rem;
 }
+.my-1\/4 {
+	margin: 0.25rem 0;
+}
 .my-5 {
 	margin: 5rem 0;
 }
