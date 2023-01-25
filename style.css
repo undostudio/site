@@ -28,7 +28,7 @@ h1 {
 a {
 	text-decoration: underline;
 }
-a:hover,
+a:hover {
 	color: #ff5d5d;
 }
 ::selection {
