@@ -29,7 +29,8 @@ a {
 	text-decoration: underline;
 }
 a:hover {
-	color: #ff5d5d;
+	text-decoration: underline;
+	text-underline-offset: 3px;
 }
 ::selection {
 	background-color: #999;
@@ -89,5 +90,8 @@ a:hover {
 		transform-origin: right top;
 		position: absolute;
 		right: 2rem;
+	}
+	footer a:hover {
+		text-underline-offset: unset;
 	}
 }
