@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: [$default-branch, 'hugo']
+    branches: [$default-branch]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
