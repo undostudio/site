@@ -1,0 +1,28 @@
+{{ define "main" }}
+	<p class="prose max-w-none text-2xl"><b>undo.studio</b> is a daily journal on what it’s like to build a software business from the ground up.</p>
+	<p class="mt-4 mb-24 prose prose-a:underline-offset-2">by <a href="https://johnjago.com">JC</a></p>
+	{{ range first 1 .Pages }}
+		<div class="flex justify-between mb-4">
+			<h2 class="font-bold"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h2>
+			<span
+				href="{{ .Permalink }}"
+				class="text-gray-600 text-right"
+			>
+				{{ .Date.Format "2 January 2006" }}
+			</span>
+		</div>
+		<article class="mb-24 prose prose-lg prose-a:underline-offset-2 max-w-none">
+			{{ .Content }}
+		</article>
+	{{ end }}
+	{{ range after 1 .Pages }}
+		<div class="flex justify-between">
+			<b><a href="{{ .Permalink }}" class="mb-4 flex justify-between hover:underline hover:underline-offset-2">{{ .Title }}</a></b>
+			<span
+				class="text-gray-600 text-right"
+			>
+				{{ .Date.Format "2 January 2006" }}
+			</span>
+		</div>
+	{{ end }}
+{{ end }}

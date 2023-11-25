@@ -1,0 +1,6 @@
+baseURL = 'https://undo.studio/'
+languageCode = 'en-us'
+title = 'undo.studio'
+
+[params]
+	description = "undo.studio is a daily journal on what it’s like to build a software business from the ground up."
