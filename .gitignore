@@ -1,0 +1,8 @@
+public/
+resources/
+.hugo_build.lock
+
+node_modules/
+
+# Tailwind output
+static/style.out.css

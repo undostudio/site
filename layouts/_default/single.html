@@ -1,0 +1,30 @@
+{{ define "title" }}
+	{{ .Title }} — {{ $.Site.Title }}
+{{ end }}
+
+{{ define "description" }}
+	{{ .Summary }}
+{{ end }}
+
+{{ define "logo-margin-bottom" }}
+	mb-16
+{{ end }}
+
+{{ define "main" }}
+	<div class="flex justify-between mb-4">
+		<h1 class="font-bold"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h1>
+		<span
+			href="{{ .Permalink }}"
+			class="text-gray-600 text-right"
+		>
+			{{ .Date.Format "2 January 2006" }}
+		</span>
+	</div>
+	<article class="prose prose-lg prose-a:underline-offset-2 max-w-none">{{ .Content }}</article>
+{{ end }}
+
+{{ define "footer" }}
+	<footer>
+		<p class="prose prose-a:underline-offset-2 max-w-none text-sm border-t-2 pt-2 mt-10"><a href="/" class="underline font-bold">undo.studio</a> is a daily journal on what it’s like to build a software business from the ground up.</p>
+	</footer>
+{{ end }}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="description" content="{{ block "description" . }}{{ $.Site.Params.Description }}{{ end }}">
+	{{ template "_internal/twitter_cards.html" . }}
+	<title>
+		{{ block "title" . }}
+		Building a software business from scratch — {{ $.Site.Title }}
+		{{ end }}
+	</title>
+	<link rel="canonical" href="{{ $.Site.BaseURL }}">
+	<link rel="shortcut icon" href="{{ "logo.svg" | absURL }}">
+	<link rel="stylesheet" href="{{ "style.out.css" | absURL }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://zhidao.johnjago.com/script.js" data-site="POZVPJPR" defer></script>
+</head>
+<body class="bg-[#fffcf9] max-w-2xl p-4 my-24 mx-auto selection:bg-[#999999] selection:text-white text-lg">
+	<header class="flex justify-center {{ block "logo-margin-bottom" . }}mb-8{{ end }}">
+		<a href="/">
+			<img
+				src="/logo.svg"
+				class="rounded-full h-8 w-8"
+			>
+		</a>
+	</header>
+	<main>
+		{{ block "main" . }}
+		{{ end }}
+	</main>
+	{{ block "footer" . }}
+	{{ end }}
+</body>
+</html>
