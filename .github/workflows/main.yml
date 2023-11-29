@@ -40,7 +40,7 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Run Tailwind CSS build
-        run: make css-build
+        run: make build-css
       - name: Build Hugo site
         env:
           # For maximum backward compatibility with Hugo modules
