@@ -1,15 +1,12 @@
-hugo:
-	hugo serve
-
 css:
 	npx tailwindcss -i ./static/style.css -o ./static/style.out.css --watch
 
-build: css-build hugo-build
+build: build-css build-hugo
 
-css-build:
+build-css:
 	npx tailwindcss -i ./static/style.css -o ./static/style.out.css
 
-hugo-build:
+build-hugo:
 	hugo --cleanDestinationDir
 
 clean:
