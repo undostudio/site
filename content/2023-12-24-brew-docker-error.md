@@ -1,5 +1,5 @@
 ---
-title: "Error: docker: It seems the App source '/Applications/Docker.app' is not there."
+title: "It seems the App source '/Applications/Docker.app' is not there"
 slug: "brew-docker-error"
 date: 2023-12-24T15:56:38-06:00
 draft: false
