@@ -11,11 +11,11 @@
 {{ end }}
 
 {{ define "main" }}
-	<div class="flex justify-between mb-4">
-		<h1 class="font-bold"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h1>
+	<div class="mb-8">
+		<h1 class="text-xl font-bold"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h1>
 		<span
 			href="{{ .Permalink }}"
-			class="text-gray-600 text-right"
+			class="text-sm text-gray-500"
 		>
 			{{ .Date.Format "2 January 2006" }}
 		</span>
@@ -25,7 +25,7 @@
 
 {{ define "footer" }}
 	<footer class="text-center">
-		<p class="prose prose-a:underline-offset-2 max-w-none text-sm pt-2 mt-24"><a href="/" class="underline font-bold">undo.studio</a> is a daily journal on what it’s like to build a software business from the ground up.</p>
+		<p class="prose prose-a:underline-offset-2 max-w-none text-sm mt-16"><a href="/" class="underline font-bold">undo.studio</a> is a daily journal on what it’s like to build a software business from the ground up.</p>
 		<form
 			action="https://buttondown.email/api/emails/embed-subscribe/john"
 			method="post"
