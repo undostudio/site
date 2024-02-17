@@ -1,9 +1,10 @@
 {{ define "main" }}
-	<p class="prose prose-lg max-w-none border border-dashed border-gray-600 rounded-2xl p-4"><b>undo.studio</b> is a journal about creating a calm, bootstrapped software business from day one. Lessons in marketing, engineering, design, sales, support, and everything in between.</p>
-	<p class="ml-4 mt-4 mb-24 prose prose-a:underline-offset-2">by <a href="https://johnjago.com">JC</a></p>
+	<div class="">
+	<p class="max-w-2xl mx-auto prose prose-lg border border-dashed border-gray-600 rounded-2xl p-4"><b>undo.studio</b> is a journal about creating a calm, bootstrapped software business from day one. Lessons in marketing, engineering, design, sales, support, and everything in between.</p>
+	<p class="max-w-2xl mx-auto pl-4 mt-4 mb-24 prose prose-a:underline-offset-2">by <a href="https://johnjago.com">JC</a></p>
 	{{ range first 1 .Pages }}
-		<div class="mb-8">
-			<h2 class="font-bold text-xl"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h2>
+		<div class="mb-8 text-center">
+			<h2 class="font-bold text-4xl"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h2>
 			<span
 				href="{{ .Permalink }}"
 				class="text-sm text-gray-500"
@@ -11,12 +12,12 @@
 				{{ .Date.Format "2 January 2006" }}
 			</span>
 		</div>
-		<article class="mb-24 prose prose-lg prose-a:underline-offset-2 prose-h2:text-base max-w-none">
+		<article class="max-w-2xl mx-auto mb-24 prose prose-lg prose-a:underline-offset-2 prose-h2:text-2xl">
 			{{ .Content }}
 		</article>
 	{{ end }}
 	{{ range after 1 .Pages }}
-		<div>
+		<div class="max-w-2xl mx-auto">
 			<b><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></b>
 			<div
 				class="text-sm text-gray-500 mb-4"
@@ -25,4 +26,5 @@
 			</div>
 		</div>
 	{{ end }}
+	</div>
 {{ end }}

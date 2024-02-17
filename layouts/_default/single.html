@@ -11,8 +11,8 @@
 {{ end }}
 
 {{ define "main" }}
-	<div class="mb-8">
-		<h1 class="text-xl font-bold"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h1>
+	<div class="mb-8 text-center">
+		<h1 class="text-4xl font-bold"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h1>
 		<span
 			href="{{ .Permalink }}"
 			class="text-sm text-gray-500"
@@ -20,12 +20,12 @@
 			{{ .Date.Format "2 January 2006" }}
 		</span>
 	</div>
-	<article class="prose prose-lg prose-a:underline-offset-2 prose-h2:text-base max-w-none">{{ .Content }}</article>
+	<article class="max-w-2xl mx-auto prose prose-lg prose-a:underline-offset-2 prose-h2:text-2xl">{{ .Content }}</article>
 {{ end }}
 
 {{ define "footer" }}
-	<footer class="text-center">
-		<p class="prose prose-a:underline-offset-2 max-w-none text-sm mt-16"><a href="/" class="underline font-bold">undo.studio</a> is a daily journal on what it’s like to build a software business from the ground up.</p>
+	<footer class="max-w-2xl mx-auto text-center border border-dashed border-gray-600 rounded-2xl mt-16 py-12 px-6 md:px-8">
+		<p class="prose prose-a:underline-offset-2 max-w-none text-sm"><a href="/" class="underline font-bold">undo.studio</a> is a journal about creating a calm, bootstrapped software business from day one. Lessons in marketing, engineering, design, sales, support, and everything in between.</p>
 		<form
 			action="https://buttondown.email/api/emails/embed-subscribe/john"
 			method="post"
