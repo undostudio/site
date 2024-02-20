@@ -1,7 +1,7 @@
 {{ define "main" }}
-	<div class="">
-	<p class="max-w-2xl mx-auto prose prose-lg border border-dashed border-gray-600 rounded-2xl p-4"><b>undo.studio</b> is a journal about creating a calm, bootstrapped software business from day one. Lessons in marketing, engineering, design, sales, support, and everything in between.</p>
-	<p class="max-w-2xl mx-auto pl-4 mt-4 mb-24 prose prose-a:underline-offset-2">by <a href="https://johnjago.com">JC</a></p>
+<div>
+	<p class="max-w-xl mx-auto prose prose-lg border border-dashed border-gray-600 rounded-2xl p-4"><b>undo.studio</b> is a journal about creating a calm, bootstrapped software business from scratch.</p>
+	<p class="max-w-xl mx-auto pl-4 mt-4 mb-24 prose prose-a:underline-offset-2">by <a href="https://johnjago.com">JC</a></p>
 	{{ range first 1 .Pages }}
 		<div class="mb-8 text-center">
 			<h2 class="font-bold text-4xl"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h2>
@@ -26,5 +26,5 @@
 			</div>
 		</div>
 	{{ end }}
-	</div>
+</div>
 {{ end }}
