@@ -11,30 +11,30 @@
 {{ end }}
 
 {{ define "main" }}
-	<div class="mb-8 text-center">
-		<h1 class="text-4xl font-bold"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h1>
-		<span
-			href="{{ .Permalink }}"
-			class="text-sm text-gray-500"
-		>
-			{{ .Date.Format "2 January 2006" }}
-		</span>
-	</div>
-	<article class="max-w-2xl mx-auto prose prose-lg prose-a:underline-offset-2 prose-h2:text-2xl">{{ .Content }}</article>
+<div class="mb-8">
+	<h1 class="text-4xl font-bold"><a href="{{ .Permalink }}" class="hover:underline hover:underline-offset-2">{{ .Title }}</a></h1>
+	<time
+		datetime="{{ .Date.Format "2006-01-02" }}"
+		class="text-sm text-stone-500"
+	>
+		{{ .Date.Format "2 January 2006" }}
+	</time>
+</div>
+<article class="prose prose-lg prose-a:underline-offset-2 prose-h2:text-2xl">{{ .Content }}</article>
 {{ end }}
 
 {{ define "footer" }}
-	<footer class="max-w-2xl mx-auto text-center border border-dashed border-gray-600 rounded-2xl mt-16 py-12 px-6 md:px-8">
-		<p class="prose prose-a:underline-offset-2 max-w-none text-sm"><a href="/" class="underline font-bold">undo.studio</a> is a journal about creating a calm, bootstrapped software business from scratch.</p>
-		<form
-			action="https://buttondown.email/api/emails/embed-subscribe/john"
-			method="post"
-			target="popupwindow"
-			onsubmit="window.open('https://buttondown.email/john', 'popupwindow')"
-			class="embeddable-buttondown-form mt-6 flex justify-center"
-		>
-			<input type="email" name="email" id="bd-email" placeholder="you@example.com" class="appearance-none shadow rounded-md ring-1 ring-slate-900/5 leading-5 text-sm border border-transparent placeholder:text-slate-400 p-2 w-72 mr-4 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500 bg-white" />
-			<input type="submit" value="Subscribe" class="text-sm bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg hover:cursor-pointer" />
-		</form>
-	</footer>
+<footer class="border border-dashed border-stone-600 rounded-2xl mt-16 py-12 px-6 md:px-8">
+	<p class="text-stone-600 text-sm"><a href="/" class="underline decoration-2 underline-offset-2 font-bold">undo.studio</a> is a journal about creating a calm, bootstrapped software business from scratch.</p>
+	<form
+		action="https://buttondown.email/api/emails/embed-subscribe/john"
+		method="post"
+		target="popupwindow"
+		onsubmit="window.open('https://buttondown.email/john', 'popupwindow')"
+		class="embeddable-buttondown-form mt-6 flex justify-center"
+	>
+		<input type="email" name="email" id="bd-email" placeholder="you@example.com" class="appearance-none shadow rounded-md ring-1 ring-stone-900/5 leading-5 text-sm border border-transparent placeholder:text-stone-400 p-2 w-full mr-4 text-stone-900 focus:outline-none focus:ring-2 focus:ring-sky-500 bg-white" />
+		<input type="submit" value="Subscribe" class="text-sm bg-stone-900 hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:ring-offset-2 focus:ring-offset-stone-50 text-white font-semibold h-12 px-6 rounded-lg hover:cursor-pointer" />
+	</form>
+</footer>
 {{ end }}
