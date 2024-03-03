@@ -15,7 +15,7 @@
 			{{ .Date.Format "2 January 2006" }}
 		</span>
 	</div>
-	<article class="mb-8 prose prose-lg prose-a:underline-offset-2 prose-h2:text-2xl">
+	<article class="mb-8 prose prose-lg prose-a:underline-offset-2 prose-a:decoration-2 prose-h2:text-2xl">
 		{{ .Content }}
 	</article>
 	{{ end }}
@@ -29,7 +29,7 @@
 	{{ range after 1 .Pages }}
 	<a
 		href="{{ .Permalink }}"
-		class="font-bold hover:underline hover:underline-offset-2"
+		class="font-semibold hover:underline hover:underline-offset-2"
 	>
 		{{ .Title }}
 	</a>
